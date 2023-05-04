@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 const { argv } = require('yargs')
-    .option('secret_key', {
+    .option('secret-key', {
         type: 'string',
         description: 'AWS Secret Key',
     })
-    .option('access_key', {
+    .option('access-key', {
         type: 'string',
         description: 'AWS Access Key',
     })
@@ -13,24 +13,15 @@ const { argv } = require('yargs')
         default: 'ap-northeast-1',
         description: 'AWS Region',
     })
-    .option('slack_webhook', {
-        type: 'string',
-        description: 'Slack webhook URL'
-    })
-    .option('subject', {
-        type: 'string',
-        default: '',
-        description: 'Slack subject'
-    })
-    .option('slack_url', {
+    .option('slack-webhook', {
         type: 'string',
         description: 'Slack webhook URL'
     })
 
-const ACCESS_KEY = argv['access_key']
-const SECRET_KEY = argv['secret_key']
+const ACCESS_KEY = argv['access-key']
+const SECRET_KEY = argv['secret-key']
 const REGION = argv['region'] || os.environ['AWS_REGION']
-const SLACK_WEBHOOK = argv['slack_webhook']
+const SLACK_WEBHOOK = argv['slack-webhook']
 const SLACK_SUBJECT = "These instances in region " + REGION + " will be stopped in next 30 minutes"
 
 var $http = require("request");
