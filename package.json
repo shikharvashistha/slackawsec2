@@ -1,0 +1,17 @@
+{
+    "name": "dashboard-export",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "shikharvashistha",
+    "license": "MIT",
+    "dependencies": {
+      "assert": "^2.0.0",
+      "request": "^2.88.2",
+      "yargs": "^17.7.2",
+      "aws-sdk": "^2.1371.0"
+    }
+  }
